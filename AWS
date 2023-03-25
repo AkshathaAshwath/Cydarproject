@@ -1,0 +1,22 @@
+Firstly i have created the EC2 instance which is running on the Nginx webservice.
+I have connected using theEC2 instance connect and used these commands to install Nginx and start the service:
+sudo yum update -y
+sudo amazon-linux-extras install nginx1.12 -y
+sudo service nginx start
+
+After the Nginx service is started i checked if theindex.html directory is present using: 
+find /usr/share/nginx/html
+
+Then i have created a simple HTML file at /usr/share/nginx/html/index.html. The HTML code is as follows:
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Text Page</title>
+</head>
+<body>
+    <h1>Hello World!</h1>
+    <p>This is my text page.</p>
+</body>
+</html>
+
+Use this Public IP to check for the deployed web application: 13.50.245.32
